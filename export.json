@@ -1,0 +1,158 @@
+[
+  {
+    "_id": "c83c5750-0f78-11e8-b0f4-83af671fb7aa",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Measurements Overview",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[{\"panelIndex\":\"1\",\"gridData\":{\"x\":0,\"y\":0,\"w\":6,\"h\":3,\"i\":\"1\"},\"id\":\"42e59d00-0f73-11e8-b0f4-83af671fb7aa\",\"type\":\"visualization\",\"version\":\"6.1.3\"},{\"panelIndex\":\"2\",\"gridData\":{\"x\":6,\"y\":0,\"w\":6,\"h\":3,\"i\":\"2\"},\"id\":\"161c01b0-0f73-11e8-b0f4-83af671fb7aa\",\"type\":\"visualization\",\"version\":\"6.1.3\"},{\"panelIndex\":\"3\",\"gridData\":{\"x\":6,\"y\":9,\"w\":6,\"h\":3,\"i\":\"3\"},\"id\":\"df605b10-0f7e-11e8-b0f4-83af671fb7aa\",\"type\":\"visualization\",\"version\":\"6.1.3\"},{\"panelIndex\":\"4\",\"gridData\":{\"x\":0,\"y\":9,\"w\":6,\"h\":3,\"i\":\"4\"},\"id\":\"ca36b900-0f7e-11e8-b0f4-83af671fb7aa\",\"type\":\"visualization\",\"version\":\"6.1.3\"},{\"panelIndex\":\"5\",\"gridData\":{\"x\":0,\"y\":3,\"w\":3,\"h\":3,\"i\":\"5\"},\"id\":\"392e9ee0-0f7f-11e8-b0f4-83af671fb7aa\",\"type\":\"visualization\",\"version\":\"6.1.3\"},{\"panelIndex\":\"6\",\"gridData\":{\"x\":9,\"y\":3,\"w\":3,\"h\":3,\"i\":\"6\"},\"id\":\"4b8ee7c0-0f7f-11e8-b0f4-83af671fb7aa\",\"type\":\"visualization\",\"version\":\"6.1.3\"},{\"panelIndex\":\"7\",\"gridData\":{\"x\":3,\"y\":3,\"w\":6,\"h\":3,\"i\":\"7\"},\"version\":\"6.1.3\",\"type\":\"visualization\",\"id\":\"4d2a75b0-0f87-11e8-b0f4-83af671fb7aa\"},{\"panelIndex\":\"8\",\"gridData\":{\"x\":3,\"y\":6,\"w\":6,\"h\":3,\"i\":\"8\"},\"version\":\"6.1.3\",\"type\":\"visualization\",\"id\":\"253fa610-0f87-11e8-b0f4-83af671fb7aa\"}]",
+      "optionsJSON": "{\"darkTheme\":false,\"hidePanelTitles\":false,\"useMargins\":true}",
+      "uiStateJSON": "{\"P-7\":{\"vis\":{\"defaultColors\":{\"0 - 4\":\"rgb(247,252,245)\",\"4 - 8\":\"rgb(199,233,192)\",\"8 - 12\":\"rgb(116,196,118)\",\"12 - 16\":\"rgb(35,139,69)\"}}},\"P-8\":{\"vis\":{\"defaultColors\":{\"0 - 25\":\"rgb(247,252,245)\",\"25 - 50\":\"rgb(199,233,192)\",\"50 - 75\":\"rgb(116,196,118)\",\"75 - 100\":\"rgb(35,139,69)\"}}}}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[],\"highlightAll\":true,\"version\":true}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "253fa610-0f87-11e8-b0f4-83af671fb7aa",
+    "_type": "visualization",
+    "_source": {
+      "title": "BMS Measurement Heatmap",
+      "visState": "{\"title\":\"BMS Measurement Heatmap\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Greens\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"significant_terms\",\"schema\":\"group\",\"params\":{\"field\":\"unit\",\"size\":10}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 23\":\"rgb(247,252,245)\",\"23 - 45\":\"rgb(199,233,192)\",\"45 - 68\":\"rgb(116,196,118)\",\"68 - 90\":\"rgb(35,139,69)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a934d360-0f72-11e8-b0f4-83af671fb7aa\",\"filter\":[{\"meta\":{\"index\":\"a934d360-0f72-11e8-b0f4-83af671fb7aa\",\"type\":\"phrases\",\"key\":\"unit\",\"value\":\" degrees celsius,  amperes,  kilowatts,  pascals,  cubic meters per hour,  percent,  revolutions per minute,  watts,  volts,  percent relative humidity\",\"params\":[\" degrees celsius\",\" amperes\",\" kilowatts\",\" pascals\",\" cubic meters per hour\",\" percent\",\" revolutions per minute\",\" watts\",\" volts\",\" percent relative humidity\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"unit\":\" degrees celsius\"}},{\"match_phrase\":{\"unit\":\" amperes\"}},{\"match_phrase\":{\"unit\":\" kilowatts\"}},{\"match_phrase\":{\"unit\":\" pascals\"}},{\"match_phrase\":{\"unit\":\" cubic meters per hour\"}},{\"match_phrase\":{\"unit\":\" percent\"}},{\"match_phrase\":{\"unit\":\" revolutions per minute\"}},{\"match_phrase\":{\"unit\":\" watts\"}},{\"match_phrase\":{\"unit\":\" volts\"}},{\"match_phrase\":{\"unit\":\" percent relative humidity\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "df605b10-0f7e-11e8-b0f4-83af671fb7aa",
+    "_type": "visualization",
+    "_source": {
+      "title": "Room Data Acquisition Rate",
+      "visState": "{\"title\":\"Room Data Acquisition Rate\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"b220e9f0-0f72-11e8-b0f4-83af671fb7aa\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "ca36b900-0f7e-11e8-b0f4-83af671fb7aa",
+    "_type": "visualization",
+    "_source": {
+      "title": "BMS Acquisition Rate",
+      "visState": "{\"title\":\"BMS Acquisition Rate\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a934d360-0f72-11e8-b0f4-83af671fb7aa\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "161c01b0-0f73-11e8-b0f4-83af671fb7aa",
+    "_type": "visualization",
+    "_source": {
+      "title": "Room Measurements",
+      "visState": "{\"title\":\"Room Measurements\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"significant_terms\",\"schema\":\"segment\",\"params\":{\"field\":\"unit\",\"size\":10}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"b220e9f0-0f72-11e8-b0f4-83af671fb7aa\",\"filter\":[{\"meta\":{\"index\":\"b220e9f0-0f72-11e8-b0f4-83af671fb7aa\",\"type\":\"phrases\",\"key\":\"unit\",\"value\":\" degrees celsius,  percent relative humidity,  pascals,  percent,  luxes,  degree days celsius, 14 (eSocial Learning) is now, 4 is now,  is now, .024 Zone 3 is now\",\"params\":[\" degrees celsius\",\" percent relative humidity\",\" pascals\",\" percent\",\" luxes\",\" degree days celsius\",\"14 (eSocial Learning) is now\",\"4 is now\",\" is now\",\".024 Zone 3 is now\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"unit\":\" degrees celsius\"}},{\"match_phrase\":{\"unit\":\" percent relative humidity\"}},{\"match_phrase\":{\"unit\":\" pascals\"}},{\"match_phrase\":{\"unit\":\" percent\"}},{\"match_phrase\":{\"unit\":\" luxes\"}},{\"match_phrase\":{\"unit\":\" degree days celsius\"}},{\"match_phrase\":{\"unit\":\"14 (eSocial Learning) is now\"}},{\"match_phrase\":{\"unit\":\"4 is now\"}},{\"match_phrase\":{\"unit\":\" is now\"}},{\"match_phrase\":{\"unit\":\".024 Zone 3 is now\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"*\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "42e59d00-0f73-11e8-b0f4-83af671fb7aa",
+    "_type": "visualization",
+    "_source": {
+      "title": "BMS Measurements",
+      "visState": "{\"title\":\"BMS Measurements\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"significant_terms\",\"schema\":\"segment\",\"params\":{\"field\":\"unit\",\"size\":10}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a934d360-0f72-11e8-b0f4-83af671fb7aa\",\"filter\":[{\"meta\":{\"index\":\"a934d360-0f72-11e8-b0f4-83af671fb7aa\",\"type\":\"phrases\",\"key\":\"unit\",\"value\":\" degrees celsius,  amperes,  kilowatts,  pascals,  cubic meters per hour,  revolutions per minute,  percent,  watts,  volts,  percent relative humidity\",\"params\":[\" degrees celsius\",\" amperes\",\" kilowatts\",\" pascals\",\" cubic meters per hour\",\" revolutions per minute\",\" percent\",\" watts\",\" volts\",\" percent relative humidity\"],\"negate\":false,\"disabled\":false,\"alias\":null},\"query\":{\"bool\":{\"should\":[{\"match_phrase\":{\"unit\":\" degrees celsius\"}},{\"match_phrase\":{\"unit\":\" amperes\"}},{\"match_phrase\":{\"unit\":\" kilowatts\"}},{\"match_phrase\":{\"unit\":\" pascals\"}},{\"match_phrase\":{\"unit\":\" cubic meters per hour\"}},{\"match_phrase\":{\"unit\":\" revolutions per minute\"}},{\"match_phrase\":{\"unit\":\" percent\"}},{\"match_phrase\":{\"unit\":\" watts\"}},{\"match_phrase\":{\"unit\":\" volts\"}},{\"match_phrase\":{\"unit\":\" percent relative humidity\"}}],\"minimum_should_match\":1}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "392e9ee0-0f7f-11e8-b0f4-83af671fb7aa",
+    "_type": "visualization",
+    "_source": {
+      "title": "BMS Measurement Count",
+      "visState": "{\"title\":\"BMS Measurement Count\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"a934d360-0f72-11e8-b0f4-83af671fb7aa\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4b8ee7c0-0f7f-11e8-b0f4-83af671fb7aa",
+    "_type": "visualization",
+    "_source": {
+      "title": "Room Measurement Count",
+      "visState": "{\"title\":\"Room Measurement Count\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"b220e9f0-0f72-11e8-b0f4-83af671fb7aa\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  },
+  {
+    "_id": "4d2a75b0-0f87-11e8-b0f4-83af671fb7aa",
+    "_type": "visualization",
+    "_source": {
+      "title": "Room Measurement Heatmap",
+      "visState": "{\"title\":\"Room Measurement Heatmap\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Greens\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"timestamp\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"significant_terms\",\"schema\":\"group\",\"params\":{\"field\":\"unit\",\"size\":10}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 4\":\"rgb(247,252,245)\",\"4 - 7\":\"rgb(199,233,192)\",\"7 - 11\":\"rgb(116,196,118)\",\"11 - 14\":\"rgb(35,139,69)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"b220e9f0-0f72-11e8-b0f4-83af671fb7aa\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    },
+    "_meta": {
+      "savedObjectVersion": 2
+    }
+  }
+]
